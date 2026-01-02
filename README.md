@@ -1,3 +1,5 @@
+deploy vercel
+
 # 🖨️ NerdyPrint - Marketplace de Impressão 3D
 
 Uma plataforma completa de e-commerce para venda de produtos de impressão 3D, com ferramentas avançadas de conversão de imagens para modelos 3D usando IA.
