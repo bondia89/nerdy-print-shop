@@ -2,14 +2,11 @@
   "version": 2,
   "buildCommand": "pnpm build",
   "installCommand": "pnpm install",
-  "devCommand": "pnpm dev",
   "framework": "vite",
-
   "env": {
     "DATABASE_URL": "file:./nerdy.db",
     "JWT_SECRET": "changeme"
   },
-
   "functions": {
     "api/**/*.ts": {
       "runtime": "nodejs20.x"
