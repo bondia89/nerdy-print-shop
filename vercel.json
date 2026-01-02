@@ -1,0 +1,36 @@
+{
+  "version": 2,
+  "buildCommand": "pnpm build",
+  "devCommand": "pnpm dev",
+  "installCommand": "pnpm install",
+  "framework": "vite",
+  "env": {
+    "DATABASE_URL": {
+      "description": "SQLite database URL (file:./nerdy.db or mysql://...)",
+      "required": false
+    },
+    "JWT_SECRET": {
+      "description": "Secret key for JWT tokens",
+      "required": true
+    },
+    "MANUS_API_KEY": {
+      "description": "Manus API key for image to 3D feature",
+      "required": false
+    },
+    "VITE_OAUTH_PORTAL_URL": {
+      "description": "OAuth portal URL",
+      "required": false
+    }
+  },
+  "functions": {
+    "api/**/*.ts": {
+      "runtime": "nodejs20.x"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "http://localhost:3000/api/$1"
+    }
+  ]
+}
